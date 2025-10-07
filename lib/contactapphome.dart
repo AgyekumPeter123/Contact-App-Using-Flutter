@@ -116,6 +116,7 @@ class Home extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return ListTile(
                     onTap: () {
+                      // ignore: unused_local_variable
                       Contact contact = Contact.fromJson(data[index]);
                       Navigator.of(context).push(
                         MaterialPageRoute(
