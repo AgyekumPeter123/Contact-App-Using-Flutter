@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:ghanatech/contact_model.dart';
 
 class ContactDetailsView extends StatelessWidget {
-  const ContactDetailsView({super.key});
+  const ContactDetailsView({super.key, required this.contact});
+
+  final Contact contact;
 
   @override
   Widget build(BuildContext context) {
@@ -33,13 +36,13 @@ class ContactDetailsView extends StatelessWidget {
             SizedBox(height: 25),
             Center(
               child: Text(
-                'Peter Agyekum',
+                contact.name,
                 style: TextStyle(fontWeight: FontWeight.w600, fontSize: 22),
               ),
             ),
             Center(
               child: Text(
-                'Sunyani',
+                '${contact.country}, ${contact.region}',
                 style: TextStyle(fontWeight: FontWeight.normal, fontSize: 20),
               ),
             ),
@@ -57,7 +60,7 @@ class ContactDetailsView extends StatelessWidget {
                       ),
                     ),
                     subtitle: Text(
-                      '+233 20 23 81 700',
+                      contact.phone,
                       style: TextStyle(
                         fontWeight: FontWeight.normal,
                         fontSize: 18,
@@ -96,7 +99,7 @@ class ContactDetailsView extends StatelessWidget {
                       ),
                     ),
                     subtitle: Text(
-                      'agyekumpeter123@gmail.com',
+                      contact.email,
                       style: TextStyle(
                         fontWeight: FontWeight.normal,
                         fontSize: 18,
@@ -171,12 +174,11 @@ class ContactDetailsView extends StatelessWidget {
             Container(
               color: Color(0xff9AADBE),
               child: Column(
-                children: [ListTile(title: Text('Share Contacts'))],
+                children: [
+                  ListTile(title: Text('Share Contacts')),
+                  ListTile(title: Text('QR Codes')),
+                ],
               ),
-            ),
-            Container(
-              color: Color(0xff9AADBE),
-              child: Column(children: [ListTile(title: Text('QR Codes'))]),
             ),
           ],
         ),
