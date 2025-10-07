@@ -54,7 +54,7 @@ Contacts Page	Displays both recent and all contacts grouped alphabetically.
 Details Page	Shows full details when a contact is selected.
 
 ![Contacts Page Screenshot](screenshots/art1.jpg)
-![Details Page Screenshot](screenshots/art2.png)
+![Details Page Screenshot](screenshots/art2.jpg)
 
 # Future Enhancements
 
